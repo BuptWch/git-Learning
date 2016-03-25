@@ -1,0 +1,35 @@
+git 学习随笔
+
+1.  git remote
+
+当从远程仓库克隆时，实际上Git自动把本地的master分支和远程的master分支对应起来了，并且，远程仓库的默认名称是origin。
+查看远程仓库信息 $ git remote    显示orgin
+
+2.  $git remote -v 查看更详细信息  
+    显示 orgin ……(fetch) orgin ……(push)
+    显示可以抓取和推送的origin的地址。如果没有推送权限，就看不到push的地址。
+    
+3. git remote add origin git@bitbucket.org:kernel365/xbcarry.git
+  现在origin关联的是别人的远程库，若要更改关联的远程库
+  git remote rm origin
+  git remote add origin git@bitbucket.org:BuptWch/xbcarry.git
+  此时origin关联的是我自己的远程库了
+  
+4.  git branch 分支名 创建分支
+    git checkout 分支名  切换到对应分支
+    git checkout -b 分知名 创建并切换到新分支 
+    git branch  查看分支
+    git merge 分支名 合并分支到当前分支
+    git branch -d 分支名  删除分支
+    
+5. git手动删除文件之后，在git删除手动删除的文件有两种方法。一、 git rm 文件/文件夹 二、git add -A/--all
+6. git push -u origin master 把本地库的所有内容推送到远程库上，-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+推送成功后，可以立刻在页面中看到远程库的内容已经和本地一模一样
+7.从现在起，只要本地作了提交，就可以通过命令：
+$ git push origin master
+把本地master分支的最新修改推送至GitHub，现在，你就拥有了真正的分布式版本库
+
+
+  
+  
+  
